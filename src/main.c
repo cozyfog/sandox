@@ -100,19 +100,19 @@ void displayFunc()
           setColor(1.0f, 0.25f, 0.0f);
           putPixel(x, y);
           canvas_buffer[x + y * CANVAS_WIDTH] = 0;
-          if (canvas_buffer[x + 1 + y * CANVAS_WIDTH] != 0)
+          if (canvas_buffer[x + 1 + y * CANVAS_WIDTH] != 0 && canvas_buffer[x + 1 + y * CANVAS_WIDTH] != BRUSH_WATER)
           {
             canvas_buffer[x + 1 + y * CANVAS_WIDTH] = BRUSH_FIRE;
           }
-          if (canvas_buffer[x - 1 + y * CANVAS_WIDTH] != 0)
+          if (canvas_buffer[x - 1 + y * CANVAS_WIDTH] != 0 && canvas_buffer[x - 1 + y * CANVAS_WIDTH] != BRUSH_WATER)
           {
             canvas_buffer[x - 1 + y * CANVAS_WIDTH] = BRUSH_FIRE;
           }
-          if (canvas_buffer[x + (y + 1) * CANVAS_WIDTH] != 0)
+          if (canvas_buffer[x + (y + 1) * CANVAS_WIDTH] != 0i && canvas_buffer[x + (y + 1) * CANVAS_WIDTH] != BRUSH_WATER)
           {
             canvas_buffer[x + (y + 1) * CANVAS_WIDTH] = BRUSH_FIRE;
           }
-          if (canvas_buffer[x + (y - 1) * CANVAS_WIDTH] != 0)
+          if (canvas_buffer[x + (y - 1) * CANVAS_WIDTH] != 0i && canvas_buffer[x + (y - 1) * CANVAS_WIDTH] != BRUSH_WATER)
           {
             canvas_buffer[x + (y - 1) * CANVAS_WIDTH] = BRUSH_FIRE;
           }
